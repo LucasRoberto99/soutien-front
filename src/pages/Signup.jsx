@@ -52,12 +52,15 @@ const Signup = () => {
     event.preventDefault();
     try {
       // console.log("1");
-      const response = await axios.post("http://localhost:3000/user/signup", {
-        email: email,
-        password: password,
-        description: description,
-        username: username,
-      });
+      const response = await axios.post(
+        "https://site--soutien-back--fhx5w78hhgzd.code.run/user/signup",
+        {
+          email: email,
+          password: password,
+          description: description,
+          username: username,
+        }
+      );
       // console.log("2");
       console.log(response.data);
     } catch (error) {
